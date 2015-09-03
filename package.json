@@ -2,8 +2,8 @@
   "name": "publicsuffixlist",
   "version": "0.2.3",
   "scripts": {
-    "preinstall": "node download_list.js",
-    "update": "node download_list.js",
+    "preinstall": "curl -k https://publicsuffix.org/list/effective_tld_names.dat?raw=1 > effective_tld_names.dat",
+    "update": "curl -k https://publicsuffix.org/list/effective_tld_names.dat?raw=1 > effective_tld_names.dat",
     "preuninstall": "node delete_list.js"
   },
   "main": "./index.js",
